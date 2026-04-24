@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg: gainsboro;
+    --form-bg: white;
+    --font: black;
+    --input: rgb(255, 255, 255);
+    --input-border: rgb(154, 154, 255);
+    --input-h-bg: rgb(214, 228, 255);
+    --input-h-border: blue;
+    --btn-border: black;
+    --btn-danger-bg: red;
+    --btn-danger-border: darkred;
+    --btn-submit-bg: rgb(230, 252, 186);
+    --btn-submit-border: green;
+    --btn-alert-bg: yellow;
+    --btn-alert-border: orange; 
+    --li-border: gainsboro;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--bg);
+    transition: all 0.3s ease;
+    color: var(--font);
+}
+
+body.dark-mode {
+    --bg: rgb(56, 56, 56);
+    --form-bg: darkgray;
+    --li-border: black;
+    --input: gainsboro;
+    --font: white;
+    --btn-submit-bg: rgb(0, 129, 0);
+    --btn-submit-border: rgb(6, 189, 0);
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+    padding: 30px;
+    width: 100%;
+    word-wrap: break-word;
+}
+
+li {
+    border-bottom: 1px solid var(--li-border);
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    word-break: break-word;
+}
+
+form {
+    background-color: var(--form-bg);
+    padding: 80px 100px;
+    margin-top: 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+input {
+    padding: 10px;
+    background-color: var(--input);
+    border-radius: 50px;
+    border: 1px solid var(--input-border);
+    transition: 0.5s ease;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--input-h-border);
+    background-color: var(--input-h-bg);
+}
+
+.lista-tarefas {
+    background-color: var(--form-bg);
+    margin-top: 20px;
+    border-radius: 20px;
+    width: 500px;
+    min-height: 50vh;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 30px;
+}
+
+.btn {
+    background-color: none;
+    border: 1px solid var(--btn-border);
+    border-radius: 50px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.danger {
+    background-color: var(--btn-danger-bg);
+    border: 1px solid var(--btn-danger-border);
+    color: var(--font);
+}
+
+.ex {
+    border-radius: 50%;
+    padding: 10px 13px;
+}
+
+.submit {
+    background-color: var(--btn-submit-bg);
+    border: 1px solid var(--btn-submit-border);
+    color: var(--font);
+}
+
+.alert {
+    position: fixed;
+    border-radius: 10px 20px;
+    border: 2px solid var(--btn-alert-border);
+    width: 300px;
+    left: 10px;
+    top: 10px;
+    background-color: var(--btn-alert-bg);
+    cursor: pointer;
+    transition: 0.5s ease;
+    font-size: 35px;
+}

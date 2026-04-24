@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style2.css">
+    <title>To-Do List</title>
+</head>
+<body>
+    <button class="alert" id="modo">
+        Modo Escuro
+    </button>
+    <form>
+        <h1>To-do List</h1>
+        <label for="tarefa">Adicionar nova tarefa</label>
+        <input type="text" id="tarefa" placeholder="Sua tarefa aqui" required>
+        <button type="submit" id="btnSubmit" class="btn submit">Criar tarefa</button>
+        <button type="submit" id="limpar" class="btn danger">Limpar Tarefas</button>
+    </form>
+    <div class="lista-tarefas">
+        <ul id="lista"></ul>
+    </div>
+    <script src="js/script3.js"></script>
+</body>
+</html>

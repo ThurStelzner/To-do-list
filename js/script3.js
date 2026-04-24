@@ -71,12 +71,18 @@ btnModo.addEventListener('click', () => {
     const modoEscuroAtivo = body.classList.contains('dark-mode');
 
     if (modoEscuroAtivo) {
-        btnModo.textContent = '☀︎ Modo Claro';
+        btnModo.textContent = 'Modo Claro';
         localStorage.setItem("tema", "escuro");
     } else {
-        btnModo.textContent = '⏾ Modo Escuro';
+        btnModo.textContent = 'Modo Escuro';
         localStorage.setItem("tema", "claro");
     }
 });
+
+const temaSalvo = localStorage.getItem('tema');
+if(temaSalvo === 'escuro') {
+    body.classList.toggle('dark-mode');
+    btnModo.textContent = 'Modo Escuro';
+}
 
 mostrarLista()

@@ -58,12 +58,16 @@ ul.addEventListener('click', (e) => {
 })
 
 limpa.addEventListener('click', () => {
-    const tarefa = obterTarefa();
-    while(tarefa.length) {
-        tarefa.pop();
-    };
-    salvarTarefa(tarefa);
-    mostrarLista();
+    if (confirm('Tem certeza que deseja excluir todas as suas tarefas?')){
+        const tarefa = obterTarefa();
+        while(tarefa.length) {
+            tarefa.pop();
+        };
+        salvarTarefa(tarefa);
+        mostrarLista();
+    } else {
+        mostrarLista();
+    }
 })
 
 btnModo.addEventListener('click', () => {
